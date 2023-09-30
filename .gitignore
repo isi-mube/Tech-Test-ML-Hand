@@ -6,24 +6,5 @@
 *.log
 
 # Ignoring specific folders and some  data files
-03_app/app.py
-01_data/01_salivary_gland
-01_data/01_salivary_gland/00_epochs
-01_data/02_gynecological
-01_data/02_gynecological/00_epochs
-01_data/03_thyroid
-01_data/03_thyroid/00_epochs
-01_data/04_efussions_wellgen
-01_data/04_efussions_wellgen/00_epochs
-.ipynb_checkpoints/test-checkpoint.ipynb
-00_entropy/.ipynb_checkpoints/test-checkpoint.ipynb
-01_data/.ipynb_checkpoints/README-checkpoint.md
-00_entropy
-00_sql/llistat.xlsx
-00_sql/~$llistat.xlsx
-00_sql/llistat.csv
-00_sql/synlab.xlsx
-00_sql/synlab.csv
-00_sql/llistat.xlsx.csv
-00_tableau/training_salivary_gland.xlsx
-00_tableau/validation_salivary_gland.xlsx
+01_data/original
+01_data/no_bg
