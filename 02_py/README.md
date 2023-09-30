@@ -1,6 +1,18 @@
-![Company Logo](https://aitaca.io/wp-content/uploads/2020/01/logo_loading.png)
-# Task Instruction: Hand Segmentation in Images (Background Removal)
-### Task Description
+# Python Workmap
+# MVP (Minimum Viable Product):
+![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
+
+# New Prototype:
+## Data Cleaning
+
+## Image Pre-Processing
+* Normalization:
+* Noise reduction:
+* Edge detection:
+
+## Modeling:
+* U-Net:
+* Transfer learning:
 
 ## Bibliography:
 * Keras Team. Oxford Pets Image Segmentation. Keras. Retrieved from https://keras.io/examples/vision/oxford_pets_image_segmentation
