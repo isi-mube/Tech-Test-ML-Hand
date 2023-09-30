@@ -3,16 +3,29 @@
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
 
 ## New Prototype:
-### Data Cleaning
+![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/2efa3326-98d7-4ce4-91c8-38c71bd15a82)
 
-### Image Pre-Processing
-* Normalization:
-* Noise reduction:
-* Edge detection:
+### New Operations:
+### Train-Validation-Test Split: 65% for Training (It'll be later on augmented), 25% for Validation, 10% for Testing.
+
+### Data Augmentation (5 new images for Training Folder, instead of 3):
+* **Brightness Range:** 0.5, 1.5
+* **Zoom Range:** 0.2
+* **Rotation Range:** 30
+* **Width & Height shift Range:** 0.1
+* **Horizontal Flip:** True
+* **Shear Range:** 0.1
+
+
+### Image Pre-Processing Chosen:
+* **Normalization:** Pixel Normalization
+* **Noise reduction:** Bilateral Filtering
+* **Histogram Equalization:** CLAHE
+* **Edge detection:** Canny Edges
+* **Morphological Operations:** Dilatation
 
 ### Modeling:
-* U-Net:
-* Transfer learning:
+* U-Net: Same architecture as the MVP
 
 ## Bibliography:
 * Keras Team. Oxford Pets Image Segmentation. Keras. Retrieved from https://keras.io/examples/vision/oxford_pets_image_segmentation
