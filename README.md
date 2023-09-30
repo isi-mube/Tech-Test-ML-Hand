@@ -19,3 +19,4 @@
 * GeeksforGeeks Team. How to Normalize, Center, and Standardize Image Pixels in Keras. GeeksforGeeks. Retrieved from https://www.geeksforgeeks.org/how-to-normalize-center-and-standardize-image-pixels-in-keras
 * Stack Overflow Community. Image and Mask Normalization in Semantic Segmentation for Cancer. Stack Overflow. Retrieved from https://stackoverflow.com/questions/67699174/image-and-mask-normalization-in-semantic-segmentation-for-cancer
 * Analytics Vidhya Team. Getting Started with Image Processing using OpenCV. Analytics Vidhya. Retrieved from https://www.analyticsvidhya.com/blog/2023/03/getting-started-with-image-processing-using-opencv
+* https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
