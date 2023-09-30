@@ -1,4 +1,3 @@
-# Modeling Process:
 # MVP (Minimum Viable Product):
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
 
