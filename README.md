@@ -3,7 +3,7 @@
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
 
 ## New Prototype:
-![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/2efa3326-98d7-4ce4-91c8-38c71bd15a82)
+![Uploading image.png…]()
 
 ### New Operations:
 * Train-Validation-Test Split: 65% for Training (It'll be later on augmented), 25% for Validation, 10% for Testing.
