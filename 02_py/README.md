@@ -1,9 +1,7 @@
 # MVP (Minimum Viable Product):
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
 
-# New Prototype:
-## Data Cleaning
-
+# New Prototype (was not working):
 ## Image Pre-Processing
 * Normalization:
 * Noise reduction:
@@ -12,6 +10,11 @@
 ## Modeling:
 * U-Net:
 * Transfer learning:
+
+# Eva VIII (Using a 2015 MacBook Pro. Better than my WALL-E old Asus for Deep Learning...)
+![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/fa9010b8-52e3-4870-b1b5-7f0e5eb04c80)
+
+Getting close, I hope. Adding more convolutional layers to the model and mimicking some of the MPV parameters.
 
 ## Bibliography:
 * Keras Team. Oxford Pets Image Segmentation. Keras. Retrieved from https://keras.io/examples/vision/oxford_pets_image_segmentation
