@@ -2,10 +2,7 @@
 ## MVP (Minimum Viable Product):
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
 
-## New Prototype:
-![Uploading image.png…]()
-
-### New Operations:
+## New Prototype Operations (wasn't working...):
 * Train-Validation-Test Split: 65% for Training (It'll be later on augmented), 25% for Validation, 10% for Testing.
 * Data Augmentation (5 new images for Training Folder, instead of 3):
   * **Brightness Range:** 0.5, 1.5
@@ -22,6 +19,9 @@
   * **Morphological Operations:** Dilatation
 * Modeling:
   * U-Net: Same architecture as the MVP
+ 
+## Eva VIII (not perfect, but progressing I guess...)
+![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/ad02f4b9-683e-474b-aec8-611bae660238)
 
 ## Bibliography:
 * Keras Team. Oxford Pets Image Segmentation. Keras. Retrieved from https://keras.io/examples/vision/oxford_pets_image_segmentation
