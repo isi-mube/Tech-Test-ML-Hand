@@ -1,9 +1,15 @@
-# Hand Segmentation in Images
+# Hand Semantic Segmentation
 ## MVP (Minimum Viable Product):
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
+ 
+## Model Eva VIII Segmentation:
+![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/ad02f4b9-683e-474b-aec8-611bae660238)
 
-## New Prototype Operations (wasn't working...):
-* Train-Validation-Test Split: 65% for Training (It'll be later on augmented), 25% for Validation, 10% for Testing.
+## Model Eva X Segmentation: 
+<img width="928" alt="Screenshot 2023-10-04 at 19 54 09" src="https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/7dd521cd-d455-4b44-bbeb-e05c37ea60ed">
+
+## Some New Stuff I tried:
+* Train-Validation-Test Split: 65% for Training (It'll be later on augmented, it's a small dataset), 25% for Validation, 10% for Testing.
 * Data Augmentation (5 new images for Training Folder, instead of 3):
   * **Brightness Range:** 0.5, 1.5
   * **Zoom Range:** 0.2
@@ -11,17 +17,14 @@
   * **Width & Height shift Range:** 0.1
   * **Horizontal Flip:** True
   * **Shear Range:** 0.1
+    
+## Useless things I also tried:
 * Image Pre-Processing Chosen:
   * **Normalization:** Pixel Normalization
   * **Noise reduction:** Bilateral Filtering
   * **Histogram Equalization:** CLAHE
   * **Edge detection:** Canny Edges
   * **Morphological Operations:** Dilatation
-* Modeling:
-  * U-Net: Same architecture as the MVP
- 
-## Eva VIII (not perfect, but progressing I guess...)
-![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/ad02f4b9-683e-474b-aec8-611bae660238)
 
 ## Bibliography:
 * Keras Team. Oxford Pets Image Segmentation. Keras. Retrieved from https://keras.io/examples/vision/oxford_pets_image_segmentation
@@ -29,3 +32,5 @@
 * Stack Overflow Community. Image and Mask Normalization in Semantic Segmentation for Cancer. Stack Overflow. Retrieved from https://stackoverflow.com/questions/67699174/image-and-mask-normalization-in-semantic-segmentation-for-cancer
 * Analytics Vidhya Team. Getting Started with Image Processing using OpenCV. Analytics Vidhya. Retrieved from https://www.analyticsvidhya.com/blog/2023/03/getting-started-with-image-processing-using-opencv
 * https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
+* https://www.sabrepc.com/blog/Deep-Learning-and-AI/Epochs-Batch-Size-Iterations
+* https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
