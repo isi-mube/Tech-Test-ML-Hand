@@ -1,12 +1,4 @@
 # AItaca Tech-Test-ML-Hand
-## MVP (Minimum Viable Product):
-![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/350359ea-a197-475e-b67f-35132e11b055)
- 
-## Model Eva VIII Segmentation:
-![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/ad02f4b9-683e-474b-aec8-611bae660238)
-
-## Model Eva X Segmentation: 
-<img width="928" alt="Screenshot 2023-10-04 at 19 54 09" src="https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/7dd521cd-d455-4b44-bbeb-e05c37ea60ed">
 
 ## About the Project
 This project started on `26/09/2023` and was completed within 2 weeks on `05/10/2023` for AItaca Tech-Test-ML-Hand.
@@ -53,6 +45,47 @@ Secondary Objectives:
 
 #@# Model: Eva X: 
 <img width="928" alt="Screenshot 2023-10-04 at 19 54 09" src="https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/7dd521cd-d455-4b44-bbeb-e05c37ea60ed">
+
+* Minimum Viable Product: [MPV](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/01_mvp.ipynb)
+* New Prototype (cleaning the code and explaining all the steps): [Prototype](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/02_prototype.ipynb)
+* [Final model Eva X](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/12_eva_X.ipynb)
+
+
+## Conclusions:
+* The MPV was done and finished in the first week, on `29/09/2023`, showing some promising results.
+* Image-preporcessing was not improving performance.
+* The next models had more complex architecture, the maximum filters I could use was 128 without loosing performance. Using dropout and residual layers helped to create the prediction masks.
+* I wanted to try different transfer learning models but hadn't time for that. Also, I thought about using object detection first to later on apply the segmentation.
+
+## Toolkit:
+
+* **JupyterLab**: Enviorment for Python scripts and managing files. AKA, as if VSCode and JupyterNotebook had a kid.
+
+**Libraries**
+
+📚 Basic Libraries
+* **Pandas**: Data manipulation and analysis.
+* **Numpy**: Arrays and mathematical functions, allowing it to read images.
+* **Os**: File managment.
+* **Matplotlib**: 2D Data visualization.
+* **Seaborn**: Runs on top of matplotlib, HD data visualization.
+* **PIL:** Python Imaging Library to manipulate images.
+
+🛠️ Tools
+* **Warnings**: Roses are red, violets are blue --> Warnings are annoying.
+* **Shutil**: File operations (copying, deleting...).
+* **Random:** To generate random subsets of data.
+
+🌐 Computer Vision
+* **TensorFlow:** Machine Learning for Computer Vision.
+* **Keras:** High-level neural networks API for Deep Learning, running on top of TensorFlow.
+* **ImageDataGenerator:** To generate random data augmentation (flips, zoom...).
+
+📈 Metrics and Reports
+* **Sklearn:** Machine Learning metrics.
+* **Confusion Matrix:** To evaluate true and false positives and negatives.
+* **Confusion Matrix Display:** To easily display the matrix.
+* **Classification Report:** For a more accurate detail of each metrics (precision, recall, f1-score, support).
 
 
 ## Bibliography:
