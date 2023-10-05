@@ -1,7 +1,8 @@
-# AItaca Tech-Test-ML-Hand
+# Image Hand Segmentation
+![Company Logo](https://aitaca.io/wp-content/uploads/2020/01/logo_loading.png)
 
 ## About the Project
-This project started on `26/09/2023` and was completed within 2 weeks on `05/10/2023` for AItaca Tech-Test-ML-Hand.
+This project started on `26/09/2023` and was completed within 2 weeks on `05/10/2023` for [AItaca Tech-Test-ML-Hand](https://aitaca.io/).
 
 Primary Objective:
 <ul>
@@ -15,21 +16,23 @@ Secondary Objectives:
 
 ## Challenges and Project Development
 * Data Cleaning:
-   * Created two new folders; original and no_bg with each hand image + [:10] original folder name as unique ID.
-   * Checked Images Sizes and Ratios, selected [1.87, 1.85] ratios to resize as size = (2160, 4000) and use it for the model.
-   * Also checked no_bg hands manually, deleting the ones that were not showing true masks (other parts of the body, or the background)
-   * Final Dataset length: 79 unique original and no_bg images. No bg_images were converted to true masks for predictions.
+    * Created two folders named 'original' and 'no_bg'. Each hand image in these folders has a unique ID which is the original folder name appended with its index ([:10]).
+    * Examined image sizes and ratios. Chose ratios [1.87, 1.85] to resize images to dimensions (2160, 4000) for the model.
+    * Manually reviewed 'no_bg' images, discarding those that did not display accurate masks (like other body parts or the background).
+    * The final dataset consisted of 79 unique original and 'no_bg' images. 'No_bg' images were transformed into true masks for predictions.
 * Data Split:
-   * Originally, it was a 80/10/10 split between training, validation and testing, using Data Augmentation to create 3 unique new images for training.
-   * For the next models after the [MPV](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/01_mvp.ipynb) I did a 65/15/10 split, using Data Augmentation to have 5 unique new images for training, and more images for validation. 
-* Data Augmentation parameters:
+    * Initially, the dataset was split in an 80/10/10 ratio for training, validation, and testing respectively. Used Data Augmentation to produce 3 unique new images for training.
+    * For subsequent models post the MVP, adopted a 65/15/10 split. Enhanced Data Augmentation to generate 5 unique new images for training and allocated more images for validation.
+* Data Augmentation:
+Parameters used:
   * **Brightness Range:** 0.5, 1.5
   * **Zoom Range:** 0.2
   * **Rotation Range:** 30
   * **Width & Height shift Range:** 0.1
   * **Horizontal Flip:** True
   * **Shear Range:** 0.1
-* Image Pre-Processing: For some models, I tried all image-preprocessing I could to check if it improved performance. The best image pre-processing techniques to detect edges were Bilateral Filtering, CLAHE, Canny Edges and Dilatation. It did not improve performance so I ended up feeding the model with unprocessed images.
+* Image Pre-Processing:
+Tried multiple pre-processing techniques, unprocessed images were eventually used as they yielded better performance.
   * **Normalization:** Pixel Normalization
   * **Noise reduction:** Bilateral Filtering
   * **Histogram Equalization:** CLAHE
@@ -43,56 +46,45 @@ Secondary Objectives:
 ### Model: Eva VIII:
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/ad02f4b9-683e-474b-aec8-611bae660238)
 
-#@# Model: Eva X: 
+## Model: Eva X: 
 <img width="928" alt="Screenshot 2023-10-04 at 19 54 09" src="https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/7dd521cd-d455-4b44-bbeb-e05c37ea60ed">
 
+## Notebooks
 * Minimum Viable Product: [MPV](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/01_mvp.ipynb)
-* New Prototype (cleaning the code and explaining all the steps): [Prototype](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/02_prototype.ipynb)
+* New Prototype (Explained all the Steps and cleaned MPV code): [Prototype](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/02_prototype.ipynb)
 * [Final model Eva X](https://github.com/isi-mube/Tech-Test-ML-Hand/blob/main/02_py/12_eva_X.ipynb)
 
 
 ## Conclusions:
 * The MPV was done and finished in the first week, on `29/09/2023`, showing some promising results.
-* Image-preporcessing was not improving performance.
-* The next models had more complex architecture, the maximum filters I could use was 128 without loosing performance. Using dropout and residual layers helped to create the prediction masks.
-* I wanted to try different transfer learning models but hadn't time for that. Also, I thought about using object detection first to later on apply the segmentation.
+* Pre-processing the images did not improve performance.
+* Succeeding models were architecturally more intricate, with a limit of 128 filters for optimum performance. Incorporating dropout and residual layers was beneficial for generating prediction masks.
+* While there was an intent to experiment with various transfer learning models, time constraints prevented this. Another potential enhancement considered was using object detection before segmentation and fine-tuning some hyperparameters.
 
 ## Toolkit:
 
-* **JupyterLab**: Enviorment for Python scripts and managing files. AKA, as if VSCode and JupyterNotebook had a kid.
+* **JupyterLab**: Enviorment for Python scripts and managing files.
 
 **Libraries**
 
 📚 Basic Libraries
-* **Pandas**: Data manipulation and analysis.
-* **Numpy**: Arrays and mathematical functions, allowing it to read images.
-* **Os**: File managment.
-* **Matplotlib**: 2D Data visualization.
-* **Seaborn**: Runs on top of matplotlib, HD data visualization.
-* **PIL:** Python Imaging Library to manipulate images.
-
-🛠️ Tools
-* **Warnings**: Roses are red, violets are blue --> Warnings are annoying.
-* **Shutil**: File operations (copying, deleting...).
+* **Numpy**: Image numeric array manipulation
+* **Os**: File access.
+* **Matplotlib**: Visualization.
+* **Shutil**: Folder operations (copying, deleting...).
 * **Random:** To generate random subsets of data.
+* **Warnings**: Roses are red, violets are blue --> Warnings are annoying.
 
 🌐 Computer Vision
 * **TensorFlow:** Machine Learning for Computer Vision.
 * **Keras:** High-level neural networks API for Deep Learning, running on top of TensorFlow.
 * **ImageDataGenerator:** To generate random data augmentation (flips, zoom...).
 
-📈 Metrics and Reports
-* **Sklearn:** Machine Learning metrics.
-* **Confusion Matrix:** To evaluate true and false positives and negatives.
-* **Confusion Matrix Display:** To easily display the matrix.
-* **Classification Report:** For a more accurate detail of each metrics (precision, recall, f1-score, support).
-
-
 ## Bibliography:
 * Keras Team. Oxford Pets Image Segmentation. Keras. Retrieved from https://keras.io/examples/vision/oxford_pets_image_segmentation
 * GeeksforGeeks Team. How to Normalize, Center, and Standardize Image Pixels in Keras. GeeksforGeeks. Retrieved from https://www.geeksforgeeks.org/how-to-normalize-center-and-standardize-image-pixels-in-keras
 * Stack Overflow Community. Image and Mask Normalization in Semantic Segmentation for Cancer. Stack Overflow. Retrieved from https://stackoverflow.com/questions/67699174/image-and-mask-normalization-in-semantic-segmentation-for-cancer
 * Analytics Vidhya Team. Getting Started with Image Processing using OpenCV. Analytics Vidhya. Retrieved from https://www.analyticsvidhya.com/blog/2023/03/getting-started-with-image-processing-using-opencv
-* https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
-* https://www.sabrepc.com/blog/Deep-Learning-and-AI/Epochs-Batch-Size-Iterations
-* https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
+* OpenCV Documentation (n.d.). Image Filtering. OpenCV Official Documentation. Retrieved from https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
+* SabrePC Blog (n.d.). Understanding the Difference Between Epochs, Batch Size and Iterations. SabrePC Blog. Retrieved from https://www.sabrepc.com/blog/Deep-Learning-and-AI/Epochs-Batch-Size-Iterations
+* Brownlee, J. (n.d.). Difference Between a Batch and an Epoch. Machine Learning Mastery. Retrieved from https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
