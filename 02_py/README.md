@@ -54,7 +54,8 @@ The architecture I've implemented is a variant of the U-Net model, a popular arc
     x = layers.Conv2D(32, (3, 3), activation='relu', padding='same')(x)
     x = layers.BatchNormalization()(x)
     x = layers.Dropout(0.2)(x)
-    x = layers.add([x, residual_1])</pre>
+    x = layers.add([x, residual_1])
+</pre>
 
 ![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/3181e8ab-7697-46ab-94b9-6d1d3df0bce7)
 
