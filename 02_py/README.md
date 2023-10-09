@@ -4,6 +4,7 @@ The architecture I've implemented is a variant of the U-Net model, a popular arc
 
 <div style="padding:10px; background-color: #f5f5f5;">
 <pre>
+    
     # First Downsampling Block
     x = layers.Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)
     x = layers.BatchNormalization()(x)
