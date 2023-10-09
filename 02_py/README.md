@@ -58,8 +58,7 @@ The architecture I've implemented is a variant of the U-Net model, a popular arc
 </pre>
 <div/>
 
-![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/3181e8ab-7697-46ab-94b9-6d1d3df0bce7)
-
+![image](https://github.com/isi-mube/Tech-Test-ML-Hand/assets/90038586/aab73582-25be-4842-8ec3-c0abf4243210)
 
 * Conv2D Layer: Convolutional layer of the network, where the image pre-processing happens and the kernel filter the image on the whole image, detecting lines and edges. `32`, `64`, `128` refers to the umber of filters used, starting from a small number. `Relu` activation adds non-linearity to the model, to learn more complex patterns. `Padding='same` ensures that the output feature map has the same width and height as the input. `Batch normalization` is applied after each convolution to stabilize and speed up training.
 * MaxPooling2D Layer:  It performs downsampling operations, and also spatial dimensions (width, height), reducing overfitting and the computional cost by decreasing the spatial dimensionality.
